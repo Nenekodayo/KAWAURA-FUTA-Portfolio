@@ -519,3 +519,80 @@ body.is-panel-open .detail-panel{ transform: translateX(0); }
 
 /* prevent scroll when open */
 body.is-panel-open{ overflow: hidden; }
+
+/* ===== Mobile: disable snap ===== */
+@media (max-width: 768px){
+  html{
+    scroll-snap-type: none;
+  }
+  .section{
+    scroll-snap-align: unset;
+    scroll-snap-stop: normal;
+  }
+}
+
+/* ===== Mobile: hide side bands ===== */
+@media (max-width: 768px){
+  .side{
+    display: none;
+  }
+  .wrap{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ===== Mobile: hero ===== */
+@media (max-width: 768px){
+  .hero__title{
+    font-size: clamp(36px, 10vw, 52px);
+  }
+  .hero__topline{
+    margin-bottom: 14px;
+  }
+}
+
+/* ===== Mobile: Works vertical ===== */
+@media (max-width: 768px){
+  .works__viewport{
+    height: auto;
+    overflow: visible;
+  }
+
+  .works__rail{
+    height: auto;
+    overflow: visible;
+  }
+
+  .htrack{
+    flex-direction: column;
+    gap: 56px;
+    padding: 0 24px;
+    transform: none !important;
+  }
+
+  .work{
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 32px 0;
+  }
+}
+
+/* ===== Mobile: View All ===== */
+@media (max-width: 768px){
+  .viewall{
+    position: static;
+    transform: none;
+    margin: 32px auto 0;
+  }
+}
+
+/* ===== Mobile: About ===== */
+@media (max-width: 768px){
+  .about__text{
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0 12px;
+  }
+}
